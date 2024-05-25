@@ -1,0 +1,71 @@
+* {
+  margin: 0; /* 外部余白 */
+  padding: 0; /* 内部余白 */
+  box-sizing: border-box; /* ボックスのサイズ計算にパディングとボーダーを含む */
+  font-family: 'Open Sans', sans-serif; /* すべての要素に "Open Sans", sans-serif フォントを設定 */
+}
+
+body {
+  background-image: url('R.png'); /* 背景画像のパスを指定 */
+  background-size: cover; /* 画像を画面全体に表示 */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像を繰り返さない */
+}
+
+.card {
+  display: flex; /* フレックスボックス */
+  flex-direction: column; /* 子要素を縦方向に配置 */
+  align-items: center; /* 子要素を左右中央揃え */
+  background-color: #fff; /* 背景色 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* 影をつける */
+  width: 80vw; /* 幅 */
+  height: 50vh; /* 高さ */
+  margin: 160px auto; /* 上下余白、左右中央配置 */
+  padding: 50px; /* 内部余白 */
+}
+
+.card h2 {
+  font-size: 1.5em; /* フォントサイズ */
+}
+
+.card .choice {
+  margin-top: 130px; /* 上の余白 */
+  display: flex; /* フレックスボックス*/
+  justify-content: space-around; /* 要素間のスペース */
+  width: 100%; /* 幅 */
+}
+
+.card .choice button {
+  border: 1px solid rgba(0, 0, 0); /* 黒の境界線 */
+  padding: 10px 20px; /* 上下と左右の余白 */
+  cursor: pointer; /* ポインタ */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 影をつける */
+  outline: none; /* フォーカス時のアウトラインを無効化 */
+  background-color: #fff; /* 背景色 */
+  width: 240px; /* 幅 */
+  font-size: 17px; /* フォントサイズ */
+  font-weight: bold;
+}
+
+.card #feedback {
+  font-size: 20em; /* フォントサイズを大きくする */
+  text-align: center; /* 中央揃え */
+  margin-top: -350px; /* 上の余白を追加 */
+  vertical-align: middle; /* 上下の配置を中央揃えにする */
+}
+
+.card #feedback.correct {
+  color: rgba(0, 128, 0, 0.5); /* 緑色で透明度を加える */
+}
+
+.card #feedback.incorrect {
+  color: rgba(255, 0, 0, 0.5); /* 赤色で透明度を加える */
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4em;
+}
